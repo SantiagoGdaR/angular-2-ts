@@ -10,7 +10,8 @@ import { InMemoryDataService }  from './in-memory-data.service';
 import { AppComponent } from './app.component'
 import { HomeComponent } from './home/home.component'
 import { ProductsComponent } from './product/products.component'
-import { ProductService } from './product/product.service'
+import { ProductComponent } from './product/detail/product.component'
+import { ProductService } from './product/shared/product.service'
 
 @NgModule({
     imports: [
@@ -25,6 +26,10 @@ import { ProductService } from './product/product.service'
             {
                 path: 'products',
                 component: ProductsComponent
+            },       
+            {
+                path: 'product/:id',
+                component: ProductComponent
             },         
             { 
                 path: '', 
@@ -35,7 +40,8 @@ import { ProductService } from './product/product.service'
     declarations: [
         AppComponent, 
         HomeComponent,
-        ProductsComponent
+        ProductsComponent,
+        ProductComponent
     ],
     providers:[
         ProductService
