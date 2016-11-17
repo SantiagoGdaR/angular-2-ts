@@ -20,4 +20,13 @@ export class ProductService {
                 .catch((error:any) => Observable.throw(error.json().error || 'Server error'))
                 .map((r: Response) => r.json().data as Product[]);
     }
+
+    getProduct(id: number): Observable<Product>{  
+        return new Observable<Product>(
+            observer => this.getProducts().subscribe(
+                products => observer.next(products.filter(product => product.id === id)[0]),
+                err => console.log("Custom Error: " + err)
+            )            
+        );
+    }
 }

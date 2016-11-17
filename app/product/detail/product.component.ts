@@ -20,11 +20,14 @@ export class ProductComponent implements OnInit{
     product: Product;
 
     ngOnInit(): void {
-        let x: number;
-        this.route.params.switchMap((params: Params) => 
-            +params['id']
+        this.route.params
+        .switchMap((params: Params) => 
+            params['id']
         ).subscribe(
-            (value: any) => console.log(this.numberID)
+            (int: number) => this.productService.getProduct(+int).subscribe(
+                product => this.product = product,
+                err => console.log(err)
+            )
         );
     }
 }
