@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAAA,eAAe;EACX,UAAU,EAAE,GAAG",
+"sources": ["generic-classes.scss"],
 "names": [],
 "file": "generic-classes.css"
 }
