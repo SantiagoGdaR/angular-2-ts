@@ -1,0 +1,8 @@
+<div class="app-pagination">
+    <ul>
+        <li *ngFor="let page of pages; let i = index"
+            (click)="onPageClick(i + 1)">
+           {{i + 1}}
+        </li>
+    </ul>
+</div>

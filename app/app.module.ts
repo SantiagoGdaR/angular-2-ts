@@ -8,11 +8,12 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
 import { FormsModule } from '@angular/forms';
 
-import { AppComponent } from './app.component'
-import { HomeComponent } from './home/home.component'
-import { ProductsComponent } from './product/products.component'
-import { ProductComponent } from './product/detail/product.component'
-import { ProductService } from './product/shared/product.service'
+import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { ProductsComponent } from './product/products.component';
+import { ProductComponent } from './product/detail/product.component';
+import { ProductService } from './product/shared/product.service';
+import { PaginationComponent } from './pagination/pagination.component';
 
 @NgModule({
     imports: [
@@ -43,7 +44,8 @@ import { ProductService } from './product/shared/product.service'
         AppComponent, 
         HomeComponent,
         ProductsComponent,
-        ProductComponent
+        ProductComponent,
+        PaginationComponent
     ],
     providers:[
         ProductService

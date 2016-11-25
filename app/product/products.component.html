@@ -1,11 +1,14 @@
 <div>
     <h3>{{title}}</h3>
 </div>
-<div class="row app-product-card" *ngFor="let product of products" (click)="onSelect(product)">
+<div class="row app-product-card" *ngFor="let product of productsPaginated" (click)="onSelect(product)">
     <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
         <img [src]="product.image" />
     </div>
     <div class="col-xs-12 col-sm-8 col-md-9 col-lg-8">
         <h4>{{product.title}}</h4>
     </div>
+</div>
+<div>
+    <pagination-component [listLength]="paginationConfig?.total" (pageChange)=setProductsPaginated($event)></pagination-component>
 </div>
