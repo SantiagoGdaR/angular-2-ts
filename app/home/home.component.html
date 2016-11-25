@@ -1,8 +1,8 @@
 <div>
-    <h3>{{home.title}}</h3>
+    <h3 [ngClass]="{'app-alternative-font-color': changeFontColor}">{{home.title}}</h3>
 
     <div class="app-margin-top">
-        <input type="text" class="form-control" [(ngModel)]="home.description" />
+        <input type="text" class="form-control" [(ngModel)]="home.description"  [disabled]="disableInput"/>
     </div>
 
     <div class="app-margin-top">
@@ -10,8 +10,18 @@
     </div>
 
     <div class="app-margin-top">
-        <button class="btn btn-primary">Event Binding!</button>
+        <button class="btn btn-primary" (click)="onBtnEventBindingClick()">{{homeBtnText}}</button>
     </div>
 
+    <div class="app-margin-top">
+        <input type="text" class="form-control" [ngModel]="home.description" (ngModelChange)="onModelDescriptionChange($event)" [disabled]="disableInput"/>
+    </div>
 
+    <div class="app-margin-top">
+        <button class="btn btn-primary" (click)="onChangeFontColorClick()">Change Title Font Color!</button>
+    </div>
+
+    <div class="app-margin-top">
+        <button class="btn btn-primary" (click)="onDisableBothInputsClick()">Disable Both Inputs!</button>
+    </div>
 </div>
