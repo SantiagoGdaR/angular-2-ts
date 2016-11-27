@@ -1,8 +1,8 @@
-<div class="app-pagination">
+<div class="app-pagination col-xs-12">
     <ul>
-        <li *ngFor="let page of pages; let i = index"
-            (click)="onPageClick(i + 1)">
-           {{i + 1}}
+        <li *ngFor="let page of pages; let i = index">
+            <button (click)="onPageClick(i + 1)" class="btn btn-secondary" 
+                [ngClass]="{'active-page': setActivePageCss(i + 1)}">{{i + 1}}</button>
         </li>
     </ul>
 </div>

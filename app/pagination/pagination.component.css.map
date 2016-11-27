@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AACI,kBAAE;EACE,UAAU,EAAE,IAAI;EAChB,qBAAE;IACE,KAAK,EAAE,IAAI",
+"mappings": "AAAA,eAAe;EACX,MAAM,EAAE,OAAO;;EACf,kBAAE;IACE,UAAU,EAAE,IAAI;IAChB,qBAAE;MACE,KAAK,EAAE,IAAI;MACX,KAAK,EAAE,KAAK;MACZ,sCAAkB;QACd,YAAY,EAAE,KAAK;EAK/B,kFAAmC;IAC/B,KAAK,EAAE,KAAK;IACZ,eAAe,EAAE,IAAI;EAEzB,4BAAY;IACR,UAAU,EAAE,UAAU",
 "sources": ["pagination.component.scss"],
 "names": [],
 "file": "pagination.component.css"

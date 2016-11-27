@@ -8,10 +8,10 @@ import { ProductService } from '../shared/product.service'
 import { Product } from '../product'
 
 @Component({
-  templateUrl: 'app/product/detail/product.component.html',
+  templateUrl: 'app/product/edit/product-edit.component.html',
   styleUrls: ['app/product/shared/product.component.css']
 })
-export class ProductComponent implements OnInit{
+export class ProductEditComponent implements OnInit{
     constructor(
         private productService: ProductService,        
         private route: ActivatedRoute,                

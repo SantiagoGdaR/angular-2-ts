@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAAA,eAAe;EACX,UAAU,EAAE,GAAG;;AAEnB,2BAA2B;EACtB,KAAK,EAAE,GAAG",
+"mappings": "AAAA,eAAe;EACX,UAAU,EAAE,GAAG;;AAEnB,2BAA2B;EACtB,KAAK,EAAE,GAAG;;AAEf,SAAS;EACL,MAAM,EAAE,OAAO",
 "sources": ["generic-classes.scss"],
 "names": [],
 "file": "generic-classes.css"

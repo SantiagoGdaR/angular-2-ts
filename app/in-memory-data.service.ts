@@ -26,21 +26,21 @@ export class InMemoryDataService implements InMemoryDbService {
         },
       {
           id: 4, 
-          title: 'HP - 15.6',
+          title: 'HP - 13.3',
           description: 'Laptop - AMD A6-Series - 4GB Memory - 500GB Hard Drive - Black',
           image: 'http://pisces.bbystatic.com/image2/BestBuy_US/images/products/5606/5606300_sd.jpg;maxHeight=145;maxWidth=222',
           price: 800
         },
       {
           id: 5, 
-          title: 'HP - 15.6',
+          title: 'HP - 11.5',
           description: 'Laptop - AMD A6-Series - 4GB Memory - 500GB Hard Drive - Black',
           image: 'http://pisces.bbystatic.com/image2/BestBuy_US/images/products/5606/5606300_sd.jpg;maxHeight=145;maxWidth=222',
           price: 900
         },
       {
           id: 6, 
-          title: 'HP - 15.6',
+          title: 'HP - 17.4',
           description: 'Laptop - AMD A6-Series - 4GB Memory - 500GB Hard Drive - Black',
           image: 'http://pisces.bbystatic.com/image2/BestBuy_US/images/products/5606/5606300_sd.jpg;maxHeight=145;maxWidth=222',
           price: 150

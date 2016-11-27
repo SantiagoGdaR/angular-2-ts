@@ -1,8 +1,21 @@
 .app-pagination{
-    ul{
+    margin: 1.5em 0;
+    ul{ 
         list-style: none;
         li{
             float: left;
+            color: white;
+            &:not(:last-child){
+                margin-right: 0.5em;
+            }
         }
+    }
+    /*override bootstrap default btn pseudo-class styles*/
+    .btn.focus, .btn:focus, .btn:hover {
+        color: white;
+        text-decoration: none;
+    }
+    .active-page{
+        background: dodgerblue;
     }
 }

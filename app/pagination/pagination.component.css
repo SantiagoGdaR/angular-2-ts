@@ -1,6 +1,17 @@
-.app-pagination ul {
-  list-style: none; }
-  .app-pagination ul li {
-    float: left; }
+.app-pagination {
+  margin: 1.5em 0;
+  /*override bootstrap default btn pseudo-class styles*/ }
+  .app-pagination ul {
+    list-style: none; }
+    .app-pagination ul li {
+      float: left;
+      color: white; }
+      .app-pagination ul li:not(:last-child) {
+        margin-right: 0.5em; }
+  .app-pagination .btn.focus, .app-pagination .btn:focus, .app-pagination .btn:hover {
+    color: white;
+    text-decoration: none; }
+  .app-pagination .active-page {
+    background: dodgerblue; }
 
 /*# sourceMappingURL=pagination.component.css.map */

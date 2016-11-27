@@ -1,0 +1,22 @@
+<div class="row" *ngIf="product">
+    <form novalidate>
+        <div class="col-xs-12">
+            <img [src]="product.image" name="image"/>
+        </div>
+        <div class="col-xs-12 app-margin-top">
+            <input type="text" class="form-control" [(ngModel)]="product.title" name="title"/>
+        </div>
+        <div class="col-xs-12 app-margin-top">
+            <textarea  class="form-control" [(ngModel)]="product.description" name="description"></textarea>
+        </div>
+        <div class="col-xs-12 app-margin-top">
+            US$ <input type="text" class="form-control" [(ngModel)]="product.price" name="price"/>
+        </div>
+        <div class="col-xs-12 app-margin-top">
+            <button class="btn btn-primary" (click)="onSaveClick()">Save</button>
+        </div>
+    </form>
+    <div class="col-xs-12 app-margin-top">
+        <span class="app-back" (click)="goBack()"><b>Back</b></span>
+    </div>
+</div>

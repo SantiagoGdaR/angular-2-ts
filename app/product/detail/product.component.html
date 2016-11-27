@@ -2,7 +2,16 @@
     <div class="col-xs-12">
         <img [src]="product.image" />
     </div>
-    <div class="col-xs-12">
+    <div class="col-xs-12 app-margin-top">
         <h4>{{product.title}}</h4>
+    </div>
+    <div class="col-xs-12 app-margin-top">
+        {{product.description}}
+    </div>
+    <div class="col-xs-12 app-margin-top">
+        US$ {{product.price}}
+    </div>
+    <div class="col-xs-12 app-margin-top">
+        <span class="app-back" (click)="goBack()"><b>Back</b></span>
     </div>
 </div>

@@ -38,6 +38,7 @@ export class ProductsComponent implements OnInit{
 
     setProductsPaginated(page){
         this.productsPaginated = this.products.filter((product, index) =>
-         (this.paginationConfig.itemsPerPage * page) >= index );
+         (this.paginationConfig.itemsPerPage * (page -1)) <= index &&
+            (this.paginationConfig.itemsPerPage * (page)) > index );
     }
 }
