@@ -3,7 +3,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 
 import { ProductService } from './shared/product.service';
 import { Product } from './product';
-import {PaginationConfig} from '../pagination/paginationConfig';
+import {PaginationConfig} from '../shared/pagination/paginationConfig';
 
 @Component({
   templateUrl: 'app/product/products.component.html',

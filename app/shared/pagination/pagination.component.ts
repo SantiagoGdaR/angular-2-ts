@@ -3,8 +3,8 @@ import { Component, Input, Output, OnChanges, EventEmitter } from '@angular/core
 
 @Component({
     selector: 'pagination-component',
-    templateUrl: 'app/pagination/pagination.component.html',
-    styleUrls: ['app/pagination/pagination.component.css']
+    templateUrl: 'app/shared/pagination/pagination.component.html',
+    styleUrls: ['app/shared/pagination/pagination.component.css']
 })
 export class PaginationComponent implements OnChanges {
     @Input('listLength') totalItems:number;

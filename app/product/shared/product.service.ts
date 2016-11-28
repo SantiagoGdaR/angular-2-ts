@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Response, Http } from '@angular/http';
+import { Response, Http, Headers } from '@angular/http';
 
 import { Observable } from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
@@ -9,6 +9,7 @@ import { Product } from '../product';
 
 @Injectable()
 export class ProductService {
+    private headers = new Headers({'Content-Type': 'application/json'});
     private productsUrl = 'app/products';  // URL to web api
     product: Product;
 
@@ -28,5 +29,13 @@ export class ProductService {
                 err => console.log("Custom Error: " + err)
             )            
         );
+    }
+
+    update(product: Product): Observable<Product> {
+        const url = `${this.productsUrl}/${product.id}`;
+        return this.http
+            .put(url, JSON.stringify(product), {headers: this.headers})
+            .catch((error:any) => Observable.throw(error.json().error || 'Server error'))
+            .map(() => product);
     }
 }

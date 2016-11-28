@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule }   from '@angular/router';
 import { HttpModule }    from '@angular/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 
 // Imports for loading & configuring the in-memory web api
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -13,7 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './product/products.component';
 import { ProductComponent } from './product/detail/product.component';
 import { ProductEditComponent } from './product/edit/product-edit.component';
-import { PaginationComponent } from './pagination/pagination.component';
+import { PaginationComponent } from './shared/pagination/pagination.component';
 
 import { ProductService } from './product/shared/product.service';
 
@@ -23,6 +23,7 @@ import { ProductService } from './product/shared/product.service';
         HttpModule,
         InMemoryWebApiModule.forRoot(InMemoryDataService),
         FormsModule,
+        ReactiveFormsModule,
         RouterModule.forRoot([
             {
                 path: 'home',

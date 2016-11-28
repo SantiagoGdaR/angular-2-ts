@@ -12,13 +12,13 @@ import { Product } from '../product'
   styleUrls: ['app/product/shared/product.component.css']
 })
 export class ProductComponent implements OnInit{
+    product: Product;
+
     constructor(
         private productService: ProductService,        
         private route: ActivatedRoute,                
         private location: Location
     ){};
-
-    product: Product;
 
     ngOnInit(): void {
         this.route.params
@@ -27,7 +27,7 @@ export class ProductComponent implements OnInit{
         ).subscribe(
             (int: number) => this.productService.getProduct(+int).subscribe(
                 product => this.product = product,
-                err => console.log(err)
+                err => console.log("Custom Error: " + err)
             )
         );
     }

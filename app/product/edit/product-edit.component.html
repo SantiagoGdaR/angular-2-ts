@@ -1,19 +1,34 @@
 <div class="row" *ngIf="product">
-    <form novalidate>
+    <form novalidate  [formGroup]="productForm"  *ngIf="productForm" (ngSubmit)="onSubmit()">
         <div class="col-xs-12">
             <img [src]="product.image" name="image"/>
         </div>
         <div class="col-xs-12 app-margin-top">
-            <input type="text" class="form-control" [(ngModel)]="product.title" name="title"/>
+            <div>
+                <input type="text" id="title" class="form-control" formControlName="title" />
+            </div>        
+            <div *ngIf="formErrors.title" class="alert alert-danger">
+                {{ formErrors.title }}
+            </div>
+        </div>        
+        <div class="col-xs-12 app-margin-top">
+            <div>
+                <textarea class="form-control" id="description" formControlName="description"></textarea>
+            </div>  
+            <div *ngIf="formErrors.description" class="alert alert-danger">
+                {{ formErrors.description }}
+            </div>
+        </div>   
+        <div class="col-xs-12 app-margin-top">
+            <div>
+                US$ <input type="text" id="price" class="form-control" formControlName="price"/>
+            </div>
+            <div *ngIf="formErrors.price" class="alert alert-danger">
+                {{ formErrors.price }}
+            </div>
         </div>
         <div class="col-xs-12 app-margin-top">
-            <textarea  class="form-control" [(ngModel)]="product.description" name="description"></textarea>
-        </div>
-        <div class="col-xs-12 app-margin-top">
-            US$ <input type="text" class="form-control" [(ngModel)]="product.price" name="price"/>
-        </div>
-        <div class="col-xs-12 app-margin-top">
-            <button class="btn btn-primary" (click)="onSaveClick()">Save</button>
+            <button class="btn btn-primary" type="submit">Save</button>
         </div>
     </form>
     <div class="col-xs-12 app-margin-top">
