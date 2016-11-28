@@ -17,6 +17,8 @@ import { PaginationComponent } from './shared/pagination/pagination.component';
 
 import { ProductService } from './product/shared/product.service';
 
+import { HighlightDirective } from './shared/directives/highlight.directive';
+
 @NgModule({
     imports: [
         BrowserModule,
@@ -53,7 +55,8 @@ import { ProductService } from './product/shared/product.service';
         ProductsComponent,
         ProductComponent,
         ProductEditComponent,
-        PaginationComponent
+        PaginationComponent,
+        HighlightDirective
     ],
     providers:[
         ProductService
