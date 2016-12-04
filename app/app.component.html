@@ -5,6 +5,9 @@
         <li routerLinkActive="active"><a routerLink="/products">Products</a></li>
     </ul>    
     <hr class="col-xs-12">
+    <div *ngIf="productsVisited !== 0">
+        Products visited: {{productsVisited}}
+    </div>
 </header>
 <div class="col-xs-12">
     <router-outlet></router-outlet>

@@ -5,6 +5,8 @@ import { Location } from '@angular/common';
 import 'rxjs/add/operator/switchMap';
 
 import { ProductService } from '../shared/product.service'
+import { ProductOpenNotificationService } from '../../shared/notifications/product-open-notification.service';
+
 import { Product } from '../product'
 
 @Component({
@@ -17,7 +19,8 @@ export class ProductComponent implements OnInit{
     constructor(
         private productService: ProductService,        
         private route: ActivatedRoute,                
-        private location: Location
+        private location: Location,
+        private _productOpenNotification : ProductOpenNotificationService
     ){};
 
     ngOnInit(): void {
@@ -26,7 +29,10 @@ export class ProductComponent implements OnInit{
             params['id']
         ).subscribe(
             (int: number) => this.productService.getProduct(+int).subscribe(
-                product => this.product = product,
+                product => {
+                    this.product = product;
+                    this._productOpenNotification.openProduct();
+                },
                 err => console.log("Custom Error: " + err)
             )
         );

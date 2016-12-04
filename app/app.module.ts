@@ -16,6 +16,7 @@ import { ProductEditComponent } from './product/edit/product-edit.component';
 import { PaginationComponent } from './shared/pagination/pagination.component';
 
 import { ProductService } from './product/shared/product.service';
+import { ProductOpenNotificationService } from './shared/notifications/product-open-notification.service';
 
 import { HighlightDirective } from './shared/directives/highlight.directive';
 
@@ -59,7 +60,8 @@ import { HighlightDirective } from './shared/directives/highlight.directive';
         HighlightDirective
     ],
     providers:[
-        ProductService
+        ProductService,
+        ProductOpenNotificationService
     ],
     bootstrap: [AppComponent]
 })
